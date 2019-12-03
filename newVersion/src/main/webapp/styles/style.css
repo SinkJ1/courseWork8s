@@ -1,0 +1,321 @@
+body {
+	background-color: #060000;
+}
+
+/* чтобы после наведения на поля войти и регистрация появлялся курсор:палец */
+.menu-title:hover {
+	cursor: pointer;
+}
+
+#block {
+	margin-top: -8px;
+	margin-left: -8px;
+	height: 40px;
+	width: 101%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	background-color: #FE750C;
+}
+
+
+#zatemnenie {
+	background: rgba(102, 102, 102, 0.5);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none; 
+}
+
+/* секция меню (на всю ширину экрана) */
+.menu {
+	z-index: 100;
+	position: relative;
+	top: 35%;
+	display: flex;
+	justify-content: center;
+}
+
+/* окошко меню, уменьшенное до размеров контента */
+.menu-content {
+	background-color: white;
+	padding: 10px 20px;
+	border: 1px solid black;
+}
+
+/* убираю отображение у радиокнопок + скрываю тело меню*/
+.menu-content input[type="radio"],
+.menu-in,
+.menu-out {
+	display: none;
+}
+
+/* отображаю элемент меню, если у него состояние checked */
+#btn-in:checked~.menu-group>.menu-in,
+#btn-out:checked~.menu-group>.menu-out {
+	display: block;
+}
+
+/* Для изменения отображения НАЖАТЫХ радиокнопок Войти и Зарегистрир */
+.menu-content>input:checked+label {
+	position: relative;
+	color: #9147ff;
+	border: 1.5px solid #C0C0C0;
+	border-bottom: none;
+	top: 1.5px;
+	background: white;
+	/* z-index: 1; /* Отображаем поверх содержимого  */
+}
+
+.menu-content>.menu-head {
+	display: inline-flex;
+}
+
+/* объединение всех menu-info + close для задания рамки  */
+.menu-group {
+	border: 1.5px solid #C0C0C0;
+}
+
+.menu-info-label {
+	display: flex;
+	padding: 5px 0;
+	font-size: 0.8em;
+	font-weight: 700;
+}
+
+.menu-info {
+	padding: 10px 10px;
+}
+
+.menu-title {
+	padding: 5px 10px;
+}
+
+/* кнопки Войти и Зарегистрироваться в меню */
+.close {
+	display: flex;
+	justify-content: center;
+	border: 1px solid #B937F0;
+	color: white;
+	margin: 10px 10px 15px;
+	background: #9147ff;
+	font-size: 12pt;
+	font-weight: 600;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.close:hover {
+	color: #FEFEFE;
+	background: #B00DF6;
+}
+
+.close:focus {
+	outline: none;
+}
+
+.cross {
+	position: relative;
+	float:right;
+	width: 22px;
+	height: 22px;
+	opacity: 0.3;
+}
+
+.cross:hover {
+	opacity: 1;
+}
+
+.cross:before, .cross:after {
+	position: absolute;
+	left: 15px;
+	content: ' ';
+	height: 23px;
+	width: 2px;
+	background-color: #333;
+}
+
+.cross:before {
+	transform: rotate(45deg);
+}
+
+.cross:after {
+	transform: rotate(-45deg);
+}
+
+.buttonIn {
+	margin-top: 4px;
+	display: inline-block;
+	width: 70px;
+	height: 30px;
+	border: 0px;
+	border-radius: 10px;
+	margin-bottom: 50px;
+	line-height: 30px;
+	cursor: pointer;
+	text-align: center;
+	background-color: #D84646;
+	margin-left: auto;
+	margin-right: 20px;
+	text-decoration: none;
+}
+
+.buttonIn:focus {
+	outline: none;
+}
+
+.buttonReg {
+	margin-top: 4px;
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	border: 0px;
+	border-radius: 10px;
+	margin-bottom: 50px;
+	line-height: 30px;
+	cursor: pointer;
+	text-align: center;
+	background-color: #D84646;
+	text-decoration: none;
+	margin-right: 50px;
+}
+
+.buttonReg:focus {
+	outline: none;
+}
+
+#okno {
+	width: 300px;
+	height: 150px;
+	text-align: center;
+	padding: 15px;
+	border: 1.5px solid #B937F0;
+	border-radius: 10px;
+	color: #0000cc;
+	position: absolute;
+	top: 30%;
+	right: 35%;
+	bottom: auto;
+	left: 35%;
+	margin: auto;
+	background: #fff;
+}
+
+#labelStyle {
+	position: relative;
+	top: 0px;
+	right: 120px;
+}
+
+
+#slideMenu {
+	position: absolute;
+	top: 10%;
+	right: 27%;
+	left: 27%;
+	bottom: auto;
+	width: 700px;
+	height: 100px;
+	border-radius: 10px;
+	background-color:  #FE750C;
+}
+
+#slideMenu > img {
+	margin-top: 4px;
+	margin-left: 17.8px;
+	margin-right: 2.3px;
+	width: 12%;
+	height: 90%;  
+	float: left;  
+	border-radius: 10px;
+	border: 1.5px solid #0000FF;
+}
+
+.slideMenuButtonR {
+	top: 30%;
+	position: relative;
+	float:right;
+	width: 20px;
+	height: 40px;
+	background-color: #A52A2A;
+	cursor: pointer;
+	border: 0.1px solid #A52A2A;
+	text-decoration: none;
+	outline:none;
+}
+
+
+.slideMenuButtonL {
+	top: 30%;
+	position: relative;
+	float:left;
+	width: 20px;
+	height: 40px;
+	background-color: #A52A2A;
+	cursor: pointer;
+	border: 0.1px solid #A52A2A;
+	text-decoration: none;
+	outline:none;
+}
+
+#filmBlock{
+	position: absolute;
+	top: 30%;
+	right: 27%;
+	left: 27%;
+	bottom: 10%;
+	width: 700px;
+	height: 1400px;
+	background-color: #FE750C;
+}
+
+.films{
+	width: 700px;
+	height: 200px;
+	border: 0.1px solid #060000;
+	background-color: #EF791F;
+	text-decoration: none;
+	outline:none;
+	cursor: pointer;
+	text-align: center;
+}
+
+.image{
+	margin-top: 20px;
+	margin-left: 20px;
+	width: 100px;
+	height: 100px;
+	border: 0.1px solid #060000;
+}
+
+#nextButton{
+	position: absolute;
+	top: 225%;
+	right: 27%;
+	bottom: 10%;
+	float: left;
+	width: 100px;
+	height: 30px;
+	background-color: #EF791F;
+	text-decoration: none;
+	outline:none;
+	cursor: pointer;
+	text-align: center;
+}
+
+#backButton{
+	position: absolute;
+	top: 225%;
+	left: 27%;
+	bottom: 10%;
+	float: right;
+	width: 100px;
+	height: 30px;
+	background-color: #EF791F;
+	text-decoration: none;
+	outline:none;
+	cursor: pointer;
+	text-align: center;
+}
