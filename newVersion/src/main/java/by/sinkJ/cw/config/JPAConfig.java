@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = "by.test")
+@ComponentScan(basePackages = "by.sinkJ")
 public class JPAConfig {
 
 	@Bean

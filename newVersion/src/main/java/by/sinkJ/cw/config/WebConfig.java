@@ -9,7 +9,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "by.senla.practics")
+@ComponentScan(basePackages = "by.sinkJ.cw")
 public class WebConfig {
 
 	@Bean

@@ -11,7 +11,7 @@ public class UserDAOImpl extends AbstractGenericDAO<User> implements UserDAO {
 
 	private static UserDAOImpl instance;
 
-	private UserDAOImpl() {
+	public UserDAOImpl() {
 	}
 
 	protected Class<User> getTClass() {

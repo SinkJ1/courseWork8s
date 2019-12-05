@@ -267,7 +267,7 @@ body {
 	left: 27%;
 	bottom: 10%;
 	width: 700px;
-	height: 1400px;
+	height: 1000px;
 	background-color: #FE750C;
 }
 
@@ -276,29 +276,50 @@ body {
 	height: 200px;
 	border: 0.1px solid #060000;
 	background-color: #EF791F;
-	text-decoration: none;
-	outline:none;
 	cursor: pointer;
 	text-align: center;
 }
 
 .image{
-	margin-top: 20px;
+	position: absolute;
+	margin-top: -35px;
 	margin-left: 20px;
 	width: 100px;
 	height: 100px;
 	border: 0.1px solid #060000;
+	pointer-events: none;
+}
+
+.FilmName{
+	position: absolute;
+	margin-top: -80px;
+	margin-left: 250px;
+	width: 100px;
+	height: 25px;
+	pointer-events: none;
+}
+
+.CO{
+	position: absolute;
+	margin-top: -35px;
+	margin-left: 200px;
+	width: 450px;
+	height: 100px;
+    text-align: justify;
+    background-color: #E18D4D;
+    pointer-events: none;
 }
 
 #nextButton{
 	position: absolute;
-	top: 225%;
+	top: 230%;
 	right: 27%;
 	bottom: 10%;
 	float: left;
 	width: 100px;
 	height: 30px;
 	background-color: #EF791F;
+	border: 2px solid #A52A2A;
 	text-decoration: none;
 	outline:none;
 	cursor: pointer;
@@ -307,15 +328,47 @@ body {
 
 #backButton{
 	position: absolute;
-	top: 225%;
+	top: 230%;
 	left: 27%;
 	bottom: 10%;
 	float: right;
 	width: 100px;
 	height: 30px;
+	border: 2px solid #A52A2A;
 	background-color: #EF791F;
 	text-decoration: none;
 	outline:none;
 	cursor: pointer;
 	text-align: center;
+}
+#exitButton{
+
+	margin-top: 4px;
+	display: inline-block;
+	width: 70px;
+	height: 30px;
+	border: 0px;
+	border-radius: 10px;
+	margin-bottom: 50px;
+	line-height: 30px;
+	cursor: pointer;
+	text-align: center;
+	background-color: #D84646;
+	margin-left: auto;
+	margin-right: 20px;
+	text-decoration: none;
+	outline: 0 !important;
+
+}
+#nameLabel{
+	margin-top: 4px;
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	border: 0px;
+	margin-bottom: 50px;
+	line-height: 30px;
+	text-align: center;
+	text-decoration: none;
+	margin-right: 50px;
 }

@@ -1,42 +1,45 @@
 package by.sinkJ.cw.model;
 
-import javax.persistence.*;
 import java.io.Serializable;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "t_user")
 public class User implements Serializable {
 
-	private static final long serialVersionUID = -6482454008708191446L;
+	/**
+	 * 
+	 */
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "user_id")
-	private Integer id;
-
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	
 	@Column(name = "user_name")
 	private String name;
 	
-	@Column(name = "E-mail")
 	private String eMail;
+	
+	private String password;
 
 	public User() {
+		
 	}
-
-	public User(String name) {
-		this.name = name;
-	}
-
-	public User(Integer id, String name) {
+	
+	public User(int id, String name, String eMail, String password) {
 		this.id = id;
 		this.name = name;
+		this.eMail = eMail;
+		this.password = password;
 	}
 
-	public Integer getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -56,9 +59,20 @@ public class User implements Serializable {
 		this.eMail = eMail;
 	}
 
-	@Override
-	public String toString() {
-		return "\n" + "User [id=" + id + ", name=" + name + "]" + "\n";
+	@Column(name = "password")
+	public String getPassword() {
+		return password;
 	}
 
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", eMail=" + eMail + ", password=" + password + "]";
+	}
+	
+	
+	
 }

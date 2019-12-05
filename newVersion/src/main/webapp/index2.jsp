@@ -1,9 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
 <head>
-<%@ page contentType="text/html;charset=utf-8" %>
-	<title> Kino</title>
+	<title> test</title>
+
+	
 	<style><%@include file="/styles/style.css"%></style>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+  
 </head>
 
 <body>
@@ -13,13 +17,6 @@
       <div class="menu-content">
         <!-- checked в зависомости от того с какой вкладки начинается взяимодествие с меню -->
         <!-- свойство name="inset" отвечает за то, чтобы состояние checked могло быть только у 1 меню -->
-        <input type="radio" name="inset" id="btn-in">
-        <!-- с помощью for связывается label c input по id -->
-        <label for="btn-in" class="menu-title menu-head">Войти</label>
-
-        <input type="radio" name="inset" id="btn-out">
-        <label for="btn-out" class="menu-title menu-head">Регистрация</label>
-
         <!-- КРЕСТИК -->
         <div id="cross" class="cross menu-head"></div>
 
@@ -44,19 +41,19 @@
             <div class="menu-info">
               <label>
                 <span class="menu-info-label">Имя пользователя</span>
-                <input id = "login" type="text" size="40"><br>
+                <input type="text" size="40"><br>
               </label>
             </div>
             <div class="menu-info">
               <label>
                 <span class="menu-info-label">Пароль</span>
-                <input id = "password" type="password" size="40"><br>
+                <input type="password" size="40"><br>
               </label>
             </div>
             <div class="menu-info">
               <label>
                 <span class="menu-info-label">Эл. почта</span>
-                <input id = "eMail" type="email" size="40"><br>
+                <input type="email" size="40"><br>
               </label>
             </div>
             <button class="close" onClick="outRegPage()">Зарегистрироваться</button>
@@ -69,8 +66,8 @@
   
 
   <div id="block">
-   <button class="buttonIn" onClick="inPage()"> Вход </button>
-   <button class="buttonReg" onClick="regPage()"> Регистрация </button> 
+      <button id = "exitButton" onClick="exitButton()"> exit </button>
+      <div id = "nameLabel"> Привет, </div>
  </div>
 
 <div id ="slideMenu">
@@ -85,6 +82,8 @@
 <button id = "nextButton"> next -> </button>
 
 <button id = "backButton"> <- back </button>
+
+
 
 <div id = "imgArray">
 
@@ -105,9 +104,7 @@
 <img src="x4.png" class="slide-single" alt="">
 
 </div>
-
 </body>
-	<script><%@include file='/js/filmsBlock.js'%></script>
+<script><%@include file='/js/filmsBlock.js'%></script>
 	<script><%@include file='/js/scripts.js'%></script>
-	<script><%@include file='/js/FilmPage.js'%></script>
 </html>
