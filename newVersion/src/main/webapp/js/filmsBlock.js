@@ -2,8 +2,9 @@ let url =  `http://localhost:8082/dasd/films`;
 let film;
 (function() { 
 	$.getJSON(url, (data) => {
+		console.log(data);
 	for (var i = 1; i < 8; i++){	
-			document.getElementById('filmBlock').innerHTML += '<button id=' + data[i].id + ' class="films" onClick="filmClick()"><div id="filmn' + data[i].id +'"class="FilmName"></div></div><div class="image"></div><div id="co' + data[i].id +'" class="CO"></div></button>'			
+			document.getElementById('filmBlock').innerHTML += '<button id=' + data[i].id + ' class="films" onClick="filmClick()"><div id="filmn' + data[i].id +'"class="FilmName"></div></div><div id="im' + data[i].id +'" class="image"></div><div id="co' + data[i].id +'" class="CO"></div></button>'			
 	}
 	field = document.getElementsByClassName('films');
 	});
@@ -11,6 +12,8 @@ let film;
 
 const createImageAsset = (path) => {
 	let image = new Image();
+	image.style.width = '100px';
+	image.style.height = '100px';
 	image.src = path;
 	return image;
 }
@@ -18,7 +21,7 @@ const createImageAsset = (path) => {
 (function() {	
 	$.getJSON(url, (data) => {
 	for (var i = 1; i < 8; i++){
-		document.getElementById('filmn' + i).innerHTML += data[data[i].id].name;
+		document.getElementById('filmn' + data[i].id).innerHTML += data[i].name;
 	}
 	 });
 })();
@@ -26,7 +29,7 @@ const createImageAsset = (path) => {
 (function() {	
 	$.getJSON(url, (data) => {
 	for (var i = 1; i < 8; i++){
-		document.getElementById('co' + i).innerHTML += data[data[i].id].sDescription;
+		document.getElementById('co' + data[i].id).innerHTML += data[i].sDescription;
 	}
 	 });
 })();
@@ -35,7 +38,7 @@ const createImageAsset = (path) => {
 	let a;
 	$.getJSON(url, (data) => {
 		for(var i = 1; i < 8; i++){
-			document.getElementById("im").appendChild(createImageAsset(data[data[i].id].image));			
+			document.getElementById('im' + data[i].id).appendChild(createImageAsset(data[i].image));			
 		}
 		
 	 });

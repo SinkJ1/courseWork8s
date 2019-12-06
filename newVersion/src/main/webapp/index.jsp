@@ -88,26 +88,25 @@
 
 <div id = "imgArray">
 
-<img src="o.png" class="slide-single" alt="">
+<img src="https://kinogo.by/uploads/cache/7/8/a/d/4/d/e/1/9/1493642778_kremnievaya-dolina-200x300.jpg" class="slide-single" alt="">
 
-<img src="x.png" class="slide-single" alt="">
+<img src="https://kinogo.by/uploads/cache/7/8/a/d/4/d/e/1/9/1493642778_kremnievaya-dolina-200x300.jpg" class="slide-single" alt="">
 
-<img src="o1.png" class="slide-single" alt="">
+<img src="https://kinogo.by/uploads/cache/7/8/a/d/4/d/e/1/9/1493642778_kremnievaya-dolina-200x300.jpg" class="slide-single" alt="">
 
-<img src="x1.png" class="slide-single" alt="">
+<img src="https://kinogo.by/uploads/cache/7/8/a/d/4/d/e/1/9/1493642778_kremnievaya-dolina-200x300.jpg" class="slide-single" alt="">
 
-<img src="o2.png" class="slide-single" alt="">
+<img src="https://kinogo.by/uploads/cache/7/8/a/d/4/d/e/1/9/1493642778_kremnievaya-dolina-200x300.jpg" class="slide-single" alt="">
 
-<img src="x2.png" class="slide-single" alt="">
-<img src="o3.png" class="slide-single" alt="">
-<img src="x3.png" class="slide-single" alt="">
-<img src="o4.png" class="slide-single" alt="">
-<img src="x4.png" class="slide-single" alt="">
+<img src="https://kinogo.by/uploads/cache/7/8/a/d/4/d/e/1/9/1493642778_kremnievaya-dolina-200x300.jpg" class="slide-single" alt="">
+<img src="https://kinogo.by/uploads/cache/7/8/a/d/4/d/e/1/9/1493642778_kremnievaya-dolina-200x300.jpg" class="slide-single" alt="">
+<img src="https://kinogo.by/uploads/cache/7/8/a/d/4/d/e/1/9/1493642778_kremnievaya-dolina-200x300.jpg" class="slide-single" alt="">
+<img src="https://kinogo.by/uploads/cache/7/8/a/d/4/d/e/1/9/1493642778_kremnievaya-dolina-200x300.jpg" class="slide-single" alt="">
+<img src="https://kinogo.by/uploads/cache/7/8/a/d/4/d/e/1/9/1493642778_kremnievaya-dolina-200x300.jpg" class="slide-single" alt="">
 
 </div>
 
 </body>
 	<script><%@include file='/js/filmsBlock.js'%></script>
 	<script><%@include file='/js/scripts.js'%></script>
-	<script><%@include file='/js/FilmPage.js'%></script>
 </html>
