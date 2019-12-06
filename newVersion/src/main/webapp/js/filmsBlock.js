@@ -2,8 +2,8 @@ let url =  `http://localhost:8082/dasd/films`;
 let film;
 (function() { 
 	$.getJSON(url, (data) => {
-	for (var i = 1; i < 8; i++){
-		document.getElementById('filmBlock').innerHTML += '<button id=' + i + ' class="films" onClick="filmClick()"><div id="filmn' + i +'"class="FilmName"></div></div><div class="image"></div><div id="co' + i +'" class="CO"></div></button>'
+	for (var i = 1; i < 8; i++){	
+			document.getElementById('filmBlock').innerHTML += '<button id=' + data[i].id + ' class="films" onClick="filmClick()"><div id="filmn' + data[i].id +'"class="FilmName"></div></div><div class="image"></div><div id="co' + data[i].id +'" class="CO"></div></button>'			
 	}
 	field = document.getElementsByClassName('films');
 	});
@@ -18,7 +18,7 @@ const createImageAsset = (path) => {
 (function() {	
 	$.getJSON(url, (data) => {
 	for (var i = 1; i < 8; i++){
-		document.getElementById('filmn' + i).innerHTML += data[i].name;
+		document.getElementById('filmn' + i).innerHTML += data[data[i].id].name;
 	}
 	 });
 })();
@@ -26,7 +26,7 @@ const createImageAsset = (path) => {
 (function() {	
 	$.getJSON(url, (data) => {
 	for (var i = 1; i < 8; i++){
-		document.getElementById('co' + i).innerHTML += data[i].sDescription;
+		document.getElementById('co' + i).innerHTML += data[data[i].id].sDescription;
 	}
 	 });
 })();
@@ -34,7 +34,9 @@ const createImageAsset = (path) => {
 (function() {	
 	let a;
 	$.getJSON(url, (data) => {
-		document.getElementById("im").appendChild(createImageAsset(data[2].image));
+		for(var i = 1; i < 8; i++){
+			document.getElementById("im").appendChild(createImageAsset(data[data[i].id].image));			
+		}
 		
 	 });
 	
@@ -44,30 +46,10 @@ function filmClick(e){
 
 	film = `http://localhost:8082/dasd/films/`+ event.target.id + ``;
 	if(film != null){
+		document.cookie = "id" + "=" + event.target.id;
 		document.location.assign('filmFolder.jsp');
-		window['id'] = event.target.id;
 	}
 	
-}
-
-function filmLoad(e){
-	
-	
-	$.getJSON(film, (data) => {
-		
-			document.getElementById("crOpisValue2").innerHTML += data[i].sDescription;
-			
-			document.getElementById("YearValue2").innerHTML += data[i].date;
-			
-			document.getElementById("ResValue2").innerHTML += data[i].producer;
-			
-			document.getElementById("RaitingValue2").innerHTML += data[i].raiting;
-			
-			document.getElementById("RegionValue2").innerHTML += data[i].region;
-			
-			document.getElementById("PriceValue2").innerHTML += data[i].profit;
-		
-		 });
 }
 
 

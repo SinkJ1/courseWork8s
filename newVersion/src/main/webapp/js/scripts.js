@@ -156,5 +156,5 @@ function playPause() {
 } 
 
 (function hello(){
-	document.getElementById('nameLabel').value += user.name;
+	//document.getElementById('nameLabel').value += user.name;
 }());

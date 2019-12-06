@@ -107,7 +107,6 @@
         </div>
 
         <div id="name2">
-            Название
         </div>
         <video id = "Player" controls >
                 <source src="E:\Torrents\Q.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
@@ -119,6 +118,6 @@
 
 </body>
 
-   <script><%@include file='/js/filmsBlock.js'%></script>
+   <script><%@include file='/js/FilmPage.js'%></script>
 	<script><%@include file='/js/scripts.js'%></script>
 </html>
