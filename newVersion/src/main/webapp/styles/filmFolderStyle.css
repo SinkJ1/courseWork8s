@@ -45,7 +45,7 @@
     position: absolute;
     top: 20px;
     margin-left: 400px;
-    width: 120px;
+    width: 250px;
 	height: 30px;
     text-align: center;
     font-weight: 600;
@@ -112,7 +112,7 @@
     position: absolute;
     top: 166px;
     left: 105px;
-    width: 120px;
+    width: 350px;
 	height: 30px;
     text-align: justify;
     font-weight: 500;
@@ -156,7 +156,7 @@
     position: absolute;
     top: 208px;
     left: 85px;
-    width: 120px;
+    width: 250px;
 	height: 30px;
     text-align: justify;
     font-weight: 500;
@@ -192,7 +192,28 @@
     top: 500px;
     left: 75px;
     width: 800px;
-    height: auto;
-    
+    height: auto;   
 	border: 0.1px solid #060000;
+}
+
+#raitingpanel{
+    position: absolute;
+    top:46%;
+    left: 75%;
+    width: 120px;
+    height: 30px;
+    
+}
+
+#dislike{
+    width: 50%;
+    height: 100%;
+    float:right;
+    background-color: #E18D4D;
+}
+
+#like{
+    background-color:#060000;
+    width: 50%;
+    height: 100%;
 }

@@ -109,10 +109,13 @@
         <div id="name2">
         </div>
         <video id = "Player" controls >
-                <source src="E:\Torrents\Q.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                <source src="https://cdn1.kinogo.by/movies/d46c3ec40752d4378c3db1e359b548ae08b0fe7b/4f0f895c14a0a438a991fbb624ccba87:2019120820/240.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
             </video>
                              
-
+		<div id="raitingpanel">
+                <div id="dislike" onClick = "dislike()"></div>
+                <div id="like" onClick = "like()"></div>
+            </div>
     </div>
     <button id="buttonBack2" onClick = "filmLoad()" ></button>
 

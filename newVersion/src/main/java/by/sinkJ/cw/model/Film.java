@@ -35,7 +35,7 @@ public class Film {
 	private String region;
 	
 	@Column(name = "profit")
-	private String profit;
+	private int profit;
 	
 	
 	public Film() {
@@ -44,7 +44,7 @@ public class Film {
 
 
 	public Film(int id, String name, String sDescription, String date, String producer, double raiting, String region,
-			String profit,String image) {
+			int profit,String image) {
 		this.id = id;
 		this.name = name;
 		this.sDescription = sDescription;
@@ -127,12 +127,12 @@ public class Film {
 	}
 
 
-	public String getProfit() {
+	public int getProfit() {
 		return profit;
 	}
 
 
-	public void setProfit(String profit) {
+	public void setProfit(int profit) {
 		this.profit = profit;
 	}
 
