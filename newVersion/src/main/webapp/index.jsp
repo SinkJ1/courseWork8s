@@ -28,16 +28,16 @@
             <div class="menu-info">
               <label>
                 <span class="menu-info-label">Имя пользователя</span>
-                <input type="text" size="40"><br>
+                <input id ="input_login" type="text" size="40"><br>
               </label>
             </div>
             <div class="menu-info">
               <label>
                 <span class="menu-info-label">Пароль</span>
-                <input type="password" size="40"><br>
+                <input id ="input_psw" type="password" size="40"><br>
               </label>
             </div>
-            <span class="close">Войти</span>
+            <button class="close" onClick="outInPage()">Войти</button>
           </div>
 
           <div  class="menu-out">
@@ -69,12 +69,14 @@
   
 
   <div id="block">
+  
+   <input type="search" id="search"><br>
+   <button class="buttonSearch" id ="buttonSearch" onClick="search()"> Поиск </button> 
    <button class="buttonIn" onClick="inPage()"> Вход </button>
    <button class="buttonReg" onClick="regPage()"> Регистрация </button> 
  </div>
 
 <div id ="slideMenu">
-
  <button class="slideMenuButtonR" onClick="rigthInMenuSlider()"></button>
  <button class="slideMenuButtonL" onClick="leftInMenuSlider()"></button>
 

@@ -19,31 +19,26 @@ public abstract class AbstractController<T> {
 	@Autowired
 	private AbstractService<T> genericService;
 
-
 	@PostMapping(produces = "application/json;charset=UTF-8")
 	public ResponseEntity<T> add(@RequestBody T entity) {
 		genericService.add(entity);
 		return ResponseEntity.ok().build();
 	}
-	
+
 	@PutMapping(produces = "application/json;charset=UTF-8")
 	public ResponseEntity<T> update(@RequestBody T entity) {
 		genericService.update(entity);
 		return ResponseEntity.ok().build();
 	}
-	
+
 	@GetMapping(value = "/{id}", produces = "application/json;charset=UTF-8")
-	public ResponseEntity<T> getOne(@PathVariable("id") Integer id) {
-		return ResponseEntity.ok(genericService.findById(id));
+	public ResponseEntity<T> getOne(@PathVariable("id") Integer id,String name) {
+			return ResponseEntity.ok(genericService.findById(id));
 	}
-	
-	
 
 	@GetMapping(produces = "application/json;charset=UTF-8")
 	public ResponseEntity<List<T>> getAll() {
 		return ResponseEntity.ok(genericService.getAll());
 	}
-
-
 
 }

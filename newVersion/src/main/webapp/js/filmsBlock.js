@@ -47,6 +47,7 @@ const createImageAsset = (path) => {
 
 function filmClick(e){
 
+	
 	film = `http://localhost:8082/dasd/films/`+ event.target.id + ``;
 	if(film != null){
 		document.cookie = "id" + "=" + event.target.id;

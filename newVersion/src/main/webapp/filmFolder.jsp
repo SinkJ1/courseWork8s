@@ -65,6 +65,8 @@
     </div>
 
     <div id="block">
+        <input type="search" size="40" id="search"><br>
+   		<button class="buttonSearch" id ="buttonSearch" onClick="search()"> Поиск </button> 
         <button class="buttonIn" onClick="inPage()"> Вход </button>
         <button class="buttonReg" onClick="regPage()"> Регистрация </button>
     </div>
@@ -109,7 +111,7 @@
         <div id="name2">
         </div>
         <video id = "Player" controls >
-                <source src="https://cdn1.kinogo.by/movies/d46c3ec40752d4378c3db1e359b548ae08b0fe7b/4f0f895c14a0a438a991fbb624ccba87:2019120820/240.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                <source src="https://cdn1.kinogo.by/movies/d46c3ec40752d4378c3db1e359b548ae08b0fe7b/029ff33d61f7c48a42d38109b8d9fa7b:2019120920/240.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
             </video>
                              
 		<div id="raitingpanel">

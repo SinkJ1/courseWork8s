@@ -105,12 +105,10 @@ function outRegPage(e) {
 
 function outInPage(e){
 
-	inPut();
+	alert(inPut());
 	getA().style.display = "none";
-	if(true){
-		document.location.assign('index2.jsp');
-	}
-
+	document.location.assign('index2.jsp');
+	
 }
 
 window.onclick = function (event) {
@@ -127,11 +125,22 @@ function registration(){
 	eMail : document.getElementById("eMail").value,
 	password : document.getElementById("password").value
 	};
-
+	document.cookie = "user_name" + "=" + user.name;
 }
 
 function inPut(){
-
+	
+	var users = 'http://localhost:8082/dasd/users';
+	$.getJSON(users, (data) => {
+		for (var i = 1; i < 8; i++){
+			if(data[i].name == document.getElementById("input_login") && data[i].password == document.getElementById("psw")){
+				filmSerachClick(data[i].id);
+				document.cookie = "user_name" + "=" + data[i].name;
+				return true;
+			}
+		}
+		 });
+	return false;
 }
 
 function post(json){
@@ -155,6 +164,23 @@ function playPause() {
 	}
 } 
 
-(function hello(){
-	//document.getElementById('nameLabel').value += user.name;
-}());
+function search(){
+	let name  = `` + document.getElementById("search").value + ``;
+		$.getJSON(`http://localhost:8082/dasd/films`, (data) => {
+		for (var i = 1; i < 8; i++){
+			if(data[i].name == name){
+				filmSerachClick(data[i].id);
+			}
+		}
+		 });
+}
+
+function filmSerachClick(id){
+
+	let film = `http://localhost:8082/dasd/films/`+ id + ``;
+	if(film != null){
+		document.cookie = "id" + "=" + id;
+		document.location.assign('filmFolder.jsp');
+	}
+	
+}

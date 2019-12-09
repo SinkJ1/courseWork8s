@@ -22,6 +22,10 @@ public abstract class AbstractGenericDAO<T> implements GenericDAO<T> {
 	public T findById(EntityManager em, Integer id) {
 		return em.find(getTClass(), id);
 	}
+	
+	public List<T> findByName(EntityManager em, String name) {
+		return em.createQuery("from " +  getTClass().getName() + " where film_name = " + "'" + name + "'", getTClass()).getResultList();
+	}
 
 	public List<T> getAll(EntityManager em) {
 		return em.createQuery("from" + " " + getTClass().getName() + "", getTClass()).getResultList();

@@ -371,3 +371,30 @@ body {
 	text-decoration: none;
 	margin-right: 50px;
 }
+
+#search{
+	width: 250px;
+	height: 30px;
+	text-decoration: none;
+	outline:none;
+	margin-top : 0.3%;
+	margin-left : 39%;
+	display: inline-block;
+	background-color: #D84646;
+}
+
+#buttonSearch{
+	
+	background-color: #D84646;
+	display: inline-block;
+	margin-left : 0.5%;
+	margin-top : 0.3%;
+	width: 70px;
+	height: 30px;
+	border-radius: 10px;
+	border: 0px;
+	text-decoration: none;
+	cursor: pointer;
+	text-align: center;
+	outline: 0 !important;
+}

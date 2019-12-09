@@ -80,6 +80,10 @@ public abstract class AbstractService<T> implements GService<T> {
 	public T findById(int id) {
 		return dao.findById(factory.createEntityManager(), id);
 	}
+	
+	public T findByName(String name){
+		return dao.findByName(factory.createEntityManager(), name).get(0);
+	}
 
 	public List<T> getAll() {
 		return dao.getAll(factory.createEntityManager());
